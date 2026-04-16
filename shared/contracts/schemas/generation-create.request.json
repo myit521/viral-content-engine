@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GenerationCreateRequest",
+  "type": "object",
+  "required": ["topic"],
+  "properties": {
+    "job_type": {
+      "type": "string",
+      "enum": ["script_generation"],
+      "default": "script_generation"
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brief": {
+      "type": ["string", "null"]
+    },
+    "selected_template_id": {
+      "type": ["string", "null"]
+    },
+    "reference_post_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "prompt_version": {
+      "type": "string",
+      "default": "generation.zhihu_to_video.v1"
+    },
+    "model_name": {
+      "type": "string",
+      "default": "rule-based-mvp"
+    }
+  },
+  "additionalProperties": false
+}
+

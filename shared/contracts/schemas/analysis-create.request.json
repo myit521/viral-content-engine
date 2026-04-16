@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AnalysisCreateRequest",
+  "type": "object",
+  "required": ["post_id"],
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "analysis_version": {
+      "type": "string",
+      "default": "v1"
+    },
+    "prompt_version": {
+      "type": "string",
+      "default": "analysis.zhihu.history.v1"
+    },
+    "model_name": {
+      "type": "string",
+      "default": "rule-based-mvp"
+    }
+  },
+  "additionalProperties": false
+}
+

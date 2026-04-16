@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TemplateCreateRequest",
+  "type": "object",
+  "required": ["name", "structure_json"],
+  "properties": {
+    "template_type": {
+      "type": "string",
+      "enum": ["title", "script", "storyboard", "caption"],
+      "default": "script"
+    },
+    "template_category": {
+      "type": "string",
+      "enum": ["title_hook", "opening_hook", "narrative_frame", "ending_cta", "full_script"],
+      "default": "narrative_frame"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicable_platform": {
+      "type": "string",
+      "default": "zhihu_to_video"
+    },
+    "applicable_topic": {
+      "type": "string",
+      "default": "history"
+    },
+    "applicable_scene": {
+      "type": "string",
+      "default": "general"
+    },
+    "structure_json": {
+      "type": "object"
+    },
+    "source_post_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "additionalProperties": false
+}
+
