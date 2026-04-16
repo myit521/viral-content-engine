@@ -75,24 +75,6 @@ viral-content-engine/
 - `docs/10-glossary.md` - 术语表
 - `docs/README.md` - 文档索引
 
-## 工作区分工
-
-为了满足 `Codex` 与 `Qoder` 不能在同一目录下开发的约束，仓库采用双子目录协作：
-
-- `apps/backend`
-  - 由 Codex 主导，负责采集、分析、模板、生成等核心后端流程。
-- `apps/console`
-  - 由 Qoder 主导，负责轻量控制台、配置页、任务查看页、人工审核页。
-- `shared/contracts`
-  - 双方共享的接口协议、JSON Schema、提示词模板约定，不直接承载复杂业务代码。
-
-## 第一阶段建议
-
-第一阶段先支持以下平台：
-
-1. 知乎
-
-小红书、B 站保留为第二阶段优先扩展平台，抖音继续后置，因为其采集与风控不稳定性更高。
 
 ## License
 
